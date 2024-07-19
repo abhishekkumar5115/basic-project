@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") -%>
+<div class="row">
+<div class="col-8">
+    <h3>Create New Listing</h3>
+    <form method="POST" action="/listing" novalidate class=" needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" placeholder="enter title" type="text"class="form-control" required/>
+            <div class="invalid-feedback"> please enter title</div>
+          
+        </div>
+       <div class="mb-3">
+        <label for="title" class="form-label">Description</label>
+        <textarea name="listing[description]" placeholder="enter description" type="text" class="form-control" required> </textarea>
+        
+       </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Upload Image</label>
+             <input name="listing[imageUrl]"  type="file" class="form-control"/>
+           
+        </div>
+       <div class="mb-3">
+        <label for="title" class="form-label">Price</label>
+        <input name="listing[price]" placeholder="enter price/night" type="" class="form-control" required/>
+        <div class="invalid-feedback"> please enter price</div>
+       </div>
+       <div class="row">
+       <div class="mb-3 col-4">
+        <label for="title" class="form-label">location</label>
+        <input name="listing[location]" placeholder="enter location" type="text" class="form-control" required/>
+        <div class="invalid-feedback"> please enter location</div>
+        </div>
+       <div class="mb-3 col-8">
+        <label for="title" class="form-label">Country</label>
+        <input name="listing[country]" placeholder="India" type="text" class="form-control" required/>
+        <div class="invalid-feedback"> please enter country</div>
+       </div>
+       <div class="mb-3 col-8">
+        <label for="category" class="form-label">Category</label>
+         <select name="listing[category]" class="form-control" required>
+            <option value="Room">Room</option>
+            <option value="Mountains">Mountains</option>
+            <option value="Top cities">Top cities</option>
+            <option value="Beach">Beach</option>
+         </select>
+       </div>
+       </div>
+        <button class="btn btn-dark">Add</button>
+        <br> <br>
+    </form>
+    </div>
+</div>
+
